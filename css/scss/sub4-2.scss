@@ -1,0 +1,93 @@
+// section
+
+$main-color:#16b6dd;
+
+section{
+  margin-top: 0;
+  .inner{
+    .main-right{
+      .main-bottom{
+        .bottom-box{
+          flex-direction: column;
+          .bottom-left{
+            min-width: 100%;
+            margin-bottom: 20px;
+          }
+          .bottom-right{
+            margin-left: 0;
+            width: 100%;
+            height: auto;
+            .beauty{
+              width: 100%;
+              height: auto;
+              .hotel-box{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                border: 1px solid $main-color;
+                border-radius: 10px;
+                box-sizing: border-box;
+                overflow: hidden;
+                padding: 0px 20px 0px 0px;
+                margin-bottom: 20px;
+                .left{
+                  width: 30%;
+                  height: 100%;
+                  background-color: gray;
+                  margin-right: 10px;
+                }
+                .right{
+                  width: 70%;
+                  padding: 5px 0px 5px 20px;
+                  box-sizing: border-box;
+                  h3{
+                    font-weight: 400;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// mobile ====
+
+@media screen and (max-width:1200px){
+  section{
+    margin-top: 20px;.inner{
+      .main-right{
+        .main-bottom{
+          .bottom-box{
+            .bottom-right{
+              .beauty{
+                .hotel-box{
+                  flex-direction: column;
+                  padding: 0;
+                  .left{
+                    min-width: 100%;
+                    height: 150px;
+                  }
+                  .right{
+                    width: 100%;
+                    padding: 5px 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  section{
+    margin-top: 0;
+  }
+}
+

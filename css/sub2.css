@@ -1,0 +1,102 @@
+@charset "UTF-8";
+section {
+  margin-top: 0;
+}
+
+section .inner .main-right .main-bottom .bottom-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-left {
+  min-width: 100%;
+  margin-bottom: 20px;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right {
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right .medicine .medi-box {
+  border-top: 1px solid #d1d1d1;
+  padding-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right .medicine .medi-box::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  width: 100px;
+  height: 1px;
+  background-color: #16b6dd;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right .medicine .medi-box:nth-child(1) {
+  margin-top: 0;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right .medicine .medi-box .box {
+  width: 350px;
+  height: 220px;
+  background-color: gray;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right .medicine .medi-box .box::after {
+  content: '예시 이미지입니다';
+  line-height: 220px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right .medicine .medi-box .p-box {
+  width: 50%;
+}
+
+section .inner .main-right .main-bottom .bottom-box .bottom-right .medicine .medi-box .p-box p {
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  section {
+    margin-top: 20px;
+  }
+  section .medi-box .p-box {
+    margin-left: 25px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    margin-top: 0;
+  }
+  section .bottom-box .bottom-right .medicine .medi-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .bottom-box .bottom-right .medicine .medi-box .box {
+    min-width: 100%;
+  }
+  section .bottom-box .bottom-right .medicine .medi-box .p-box {
+    min-width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

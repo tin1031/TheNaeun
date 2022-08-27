@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/a947f92a9e.js" crossorigin="anonymous"></script>
+  <!-- swiper -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/index.js"></script>
+  <script type="module">
+    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+  
+    const swiper = new Swiper(".mySwiper", {
+      loop:true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      autoplay:{
+        delay:3000,
+        loop:true,
+      }
+    })
+  </script>
+  <title>The나은 동물병원</title>
+</head>
+<body>
+
+  <div class="wrapper">
+    
+
+    <!-- header -->
+    <header>
+      <div class="ham">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt=""/></a>
+      </div>
+    </header>
+
+    <!-- menu -->
+    <nav>
+      <div class="inner">
+        <div class="menu-top-box">
+          <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="-"></a>
+          </div>
+          <div class="txt-box">
+            <h3><span>전화 예약 및 문의</span>는 Tel. 053) 477-7582</h3>
+            <div class="search">
+              <input type="text" placeholder="검색하기"/>
+              <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="menu">
+          <li><a href="sub.html">나은소식</a></li>
+          <li>
+            <a href="javascript:void(0)">진료과목</a>
+            <ul>
+              <li><a href="sub2.html">내과</a></li>
+              <li><a href="sub2-2.html">일반외과</a></li>
+              <li><a href="sub2-3.html">치과</a></li>
+              <li><a href="sub2-4.html">중성화</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)">진료안내</a>
+            <ul>
+              <li><a href="sub3.html">접종안내</a></li>
+              <li><a href="sub3-2.html">미용안내</a></li>
+              <li><a href="sub3-3.html">호텔안내</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="javascript:void(0)">후기</a>
+            <ul>
+              <li><a href="sub4.html">미용후기</a></li>
+              <li><a href="sub4-2.html">호텔후기</a></li>
+            </ul>
+          </li>
+          <li><a href="sub5.html">질문답변</a></li>
+        </ul>
+      </div>
+    </nav>
+      
+    <!-- main -->
+    <main>
+      <div class="inner">
+        <!-- main-top -->
+        <div class="top">
+          <h1>“ 더나은동물병원 ”</h1>
+          <h3>보호자와 반려동물의 <span>더 나은삶</span>을 위해</h3>
+          <p>
+            저희 더나은동물병원은 반려동물과 보호자분들의 <span>더 나은삶</span>을 위하여 존재합니다.<br/>
+            병원에 방문하시는 모든 환자와 보호자의 삶이 더 나아질 수 있도록 최선을 다하겠습니다.
+          </p>
+        </div>
+
+        <!-- main-search -->
+        <div class="search">
+          <input type="text" placeholder="검색하기"/>
+          <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- main-bottom -->
+      <div class="bottom">
+        <div class="main-box">
+          <div class="thebox">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/mmain1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/mmain2.jpg" alt="">
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+            <div class="longbox">
+              <div class="time">
+                <div class="hour">
+                  <ul>
+                    <li><img src="img/time.png" alt=""/>진료시간</li>
+                    <li>평일<span>AM 09:30 ~ PM 19:30</span></li>
+                    <li>평일<span>PM 19:30 ~ AM 09:30</span></li>
+                    <li>주말<span>AM 10:00 ~ PM 18:00</span></li>
+                    <li>공휴일은 예약진료 및 응급처치만 받고 있습니다.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="last">
+                <img src="img/icon2.png" alt=""/>
+                <h3>진료과목</h3>
+                <p>
+                  본원에서는 반려동물 예방접종과 건강검진,<br/>
+                  일반외·내과, 피부과, 치과 등을<br/>
+                  다루고 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="thebox">
+            <div class="longbox">
+              <div class="tel">
+                <img src="img/icon4.png" alt=""/>
+                <h3>예약 및 문의</h3>
+                <h2>Tel.053) 477-7582</h2>
+                <span>
+                  예약이 필요하시거나 궁금하신 사항이 있으시면<br/>
+                  친절히 안내해드립니다.
+                </span>
+              </div>
+              <div class="last">
+                <img src="img/icon3.png" alt=""/>
+                <h3>진료안내</h3>
+                <p>
+                  보호자와 반려동물 모두 안심하고<br/>
+                  병원을 이용할 수 있도록 해당 병원에서<br/>
+                  해줄 수 있는 진료를 안내해드립니다.
+                </p>
+              </div>
+            </div>
+            <div class="dogbox">
+              <h4>중성화 수술</h4>
+              <p>
+                내 반려견을 위한 중성화 수술,<br/>
+                망설이지 말고 더나은동물병원에 맡겨주세요
+              </p>
+              <button>살펴보기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="back">
+      
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="inner">
+       <div class="footer-box">
+          <div class="left">
+            <p>개인정보처리방침</p>
+            <p>이용약관</p>
+            <p>고객센터</p>
+          </div>
+          <div class="right">
+            <span>대구광역시 달서구 도원로 11 ( 도원동 1435 (우) 42833 )</span>
+          </div>
+        </div>
+        <div class="logo-img">
+          <img src="img/footer.png" alt=""/>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  
+</body>
+</html>

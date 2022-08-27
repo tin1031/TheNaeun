@@ -1,0 +1,103 @@
+// section
+
+$main-color:#16b6dd;
+
+section{
+  margin-top: 0;
+  .inner{
+    .main-right{
+      .main-bottom{
+        .bottom-box{
+          flex-direction: column;
+          .bottom-left{
+            min-width: 100%;
+            margin-bottom: 20px;
+          }
+          .bottom-right{
+            margin-left: 0;
+            width: 100%;
+            height: auto;
+            .medicine{
+              .medi-box{
+                border-top: 1px solid #d1d1d1;
+                padding-top: 20px;
+                box-sizing: border-box;
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                &::after{
+                  content: '';
+                  position: absolute;
+                  top: -1px;
+                  width: 100px;
+                  height: 1px;
+                  background-color: $main-color;
+                }
+                &:nth-child(1){
+                  margin-top: 0;
+                }
+                .box{
+                  width: 350px;
+                  height: 220px;
+                  background-color: gray;
+                  &::after{
+                    content: '예시 이미지입니다';
+                    line-height: 220px;
+                    margin-left: 30px;
+                    font-size: 18px;
+                  }
+                }
+                .p-box{
+                  width: 50%;
+                  p{
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+
+// mobile
+
+@media screen and (max-width:1200px){
+  section{
+    margin-top: 20px;
+    .medi-box{
+      .p-box{
+        margin-left: 25px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  section{
+    margin-top: 0;
+    .bottom-box{
+      .bottom-right{
+        .medicine{
+          .medi-box{
+            flex-direction: column;
+            .box{
+              min-width: 100%;
+            }
+            .p-box{
+              min-width: 100%;
+              margin-left: 0;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

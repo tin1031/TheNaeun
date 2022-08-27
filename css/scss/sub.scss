@@ -1,0 +1,334 @@
+
+$main-color:#16b6dd;
+
+// ================= section ===============
+section{
+  width: 100%;
+  max-height: auto;
+  background-color:#fff;
+  margin-top: 70px;
+  margin-bottom: 120px;
+  .main-img{
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    font-size: 16px;
+    background:url(../../img/sub4top.jpg) no-repeat center center;
+    margin-bottom: 60px;
+    line-height: 16px;
+    p{
+      &:nth-child(1){
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        padding-top: 40px;
+        margin: 0;
+        animation:fontani 0.7s ease-out;
+      }
+      &:nth-child(2){
+        font-size: 22px;
+        font-weight: 500;
+        animation:fontani2 0.7s ease-out;
+      }
+    }
+    span{
+      width: 20px;
+      height: 1px;
+      display: block;
+      background-color: #fff;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    strong{
+      font-weight: 100;
+      animation:fontani2 0.7s ease-out;
+    }
+    
+    // 폰ㅌ 애니메이션
+    @keyframes fontani {
+      from{
+        letter-spacing: -2px;
+        opacity: 0;
+      }
+      to{
+        letter-spacing: 4px;
+        opacity: 1;
+      }
+    }
+    @keyframes fontani2 {
+      from{
+        letter-spacing: -2px;
+        opacity: 0;
+      }
+      to{
+        letter-spacing: 0px;
+        opacity: 1;
+      }
+    }
+    @keyframes backani {
+      from{
+        letter-spacing: 4px;
+        opacity: 1;
+      }
+      to{
+        letter-spacing: -2px;
+        opacity: 0;
+      }
+    }
+    @keyframes backani2 {
+      from{
+        letter-spacing: 0px;
+        opacity: 1;
+      }
+      to{
+        letter-spacing: -2px;
+        opacity: 0;
+      }
+    }
+  }
+  .inner{
+    width: 1300px;
+    display: flex;
+    justify-content: center;
+
+    
+    // ================= section - main left ~ menu ===============
+    .main-left{
+      width: 300px;
+      img{
+        display: block;
+      }
+      .menu{
+        border: 1px solid rgb(209, 209, 209);
+        font-size: 17px;
+        li{
+          input{
+            display: none;
+              &:checked ~ .sub-ul{
+                max-height: 100vh;
+              }
+          }
+          label{
+            &::after{
+              content: '>';
+              float: right;
+            }
+          }
+          &>a, label{
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            display: block;
+            cursor: pointer;
+          }
+          &:hover label{
+            background-color: #f9f9f9;
+            color: $main-color;
+          }
+          &>a{
+            &:hover{
+              background-color: #f9f9f9;
+              color: $main-color;
+            }
+          }
+          .sub-ul{
+            max-height: 0;
+            overflow: hidden;
+            font-size: 16px;
+            li{
+              border-bottom: 1px solid #eee;
+              cursor: pointer;
+              a{
+                display: block;
+                padding: 20px 40px;
+                box-sizing: border-box;
+                &:hover{
+                  color: $main-color;
+                }
+              }
+            }
+          }
+        }
+          
+        
+      }
+      .tel-img{
+        margin-top: 30px;
+        width: 300px;
+        height: 120px;
+        line-height: 1em;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        border: 1px solid rgb(209, 209, 209);
+        letter-spacing: -1px;
+        position: relative;
+        overflow: hidden;
+        background-color: #fff;
+        h2{
+          font-size: 18px;
+          font-weight: 100;
+        }
+        h1{
+          font-size: 22px;
+          font-weight: 300;
+        }
+        img{
+          position: absolute;
+          right: -10px;
+          top:10px;
+        }
+      }
+    }
+
+    // ================= section - main right ===============
+    .main-right{
+      margin-left: 50px;
+      width: 950px;
+      border: 1px solid rgb(209, 209, 209);
+      font-family: 'Noto Sans KR', sans-serif;
+      padding: 50px;
+      span{
+        color:$main-color;
+      }
+      .main-top{
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgb(209, 209, 209);
+        h3{
+          display: inline;
+          font-weight: 100;
+          font-size: 18px;
+          &::after{
+            content: '>';
+            font-family: 'Nanum Gothic', serif;
+            margin: 0px 10px;
+          }
+        }
+        
+        strong{
+          font-size: 18px;
+          font-weight: 100;
+          &::after{
+            content: '>';
+            font-family: 'Nanum Gothic', serif;
+            margin: 0px 10px;
+          }
+        }
+        span{
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+      .main-bottom{
+        .bottom-top{
+          h1{
+            margin-top:40px;
+            font-size: 40px;
+            letter-spacing: -4px;
+            font-weight: 300;
+          }
+        }
+        .bottom-box{
+          display: flex;
+          .bottom-left{
+            p{
+              font-weight: 300;
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+          .bottom-right{
+            margin-left: 30px;
+            width: 300px;
+            height: auto;
+            .cat-box{
+              width: 100%;
+              height: 100%;
+              background: url(../../img/sub1m.png) no-repeat center center;
+              background-size: cover;
+              background-position: 72% 100%;
+            }
+            h3{
+              font-size: 22px;
+            }
+            p, li{
+              font-size: 18px;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ============= pad & mobile ===========
+@media screen and (max-width:1200px) {
+  section{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    .main-img{
+      display: none;
+    }
+    .inner{
+      width: 100%;
+      .main-left{
+        display: none;
+      }
+      .main-right{
+        margin-left: 0;
+        .main-bottom{
+          .bottom-top{
+            h1{
+              font-size: 34px;
+            }
+          }
+          .bottom-box{
+            .bottom-left{
+              width:70%;
+            }
+            .bottom-right{
+              height: 300px;
+              p{
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  section{
+    margin-top: 0px;
+    .inner{
+      .main-right{
+        padding: 30px;
+        width: 100%;
+        .main-top{
+          h3{
+            font-size: 16px;
+          }
+        }
+        .main-bottom{
+          .bottom-box{
+            flex-direction: column;
+            .bottom-left{
+              width: auto;
+            }
+            .bottom-right{
+              width: auto;
+              margin: 30px 0px;
+              height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

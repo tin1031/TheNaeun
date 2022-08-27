@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css); 
+
+
+$main-color:#16b6dd;
+
+html{
+  scroll-behavior: smooth;
+  }
+body{
+  font-family: 'Jeju Gothic', sans-serif;
+  font-weight:300;
+  color:#222;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 15px;
+  line-height: 1.5em;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #222;
+}
+
+// reset css
+button{
+  cursor: pointer;
+}
+button, input, textarea, select{
+  outline: none;
+}
+
+.inner{
+  width: 1200px;
+  margin: 0 auto;
+}
+.ham{
+  display: none;
+}
+.back{
+  opacity: 0;
+}
+
+ // === search ===
+ .search{
+  margin: 80px 0px;
+  display: flex;
+  justify-content: center;
+  input{
+    all:unset;
+    text-align: left;
+    padding-left:20px;
+    box-sizing: border-box;
+    width: 350px;
+    height: 50px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .icon{
+    width: 50px;
+    left: 50px;
+    cursor: pointer;
+    background-color: #16b6dd;
+    text-align: center;
+    i{
+      line-height: 50px;
+      font-size: 22px;
+      color:#fff;
+    }
+  }
+}
+
+// body
+.wrapper{
+  margin: 0;
+  padding: 0;
+
+  // ================= header ===============
+  header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    .logo{
+      padding: 30px;
+    }
+  }
+
+  // ================= nav - menu ===============
+  nav{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    .inner{
+      z-index: 999;
+      .menu-top-box{
+        display: none;
+      }
+      .menu{
+        display: flex;
+        text-align: center;
+        font-size: 17px;
+        &>li{
+          width: 100%;
+          line-height: 90px;
+          &:hover a::after{
+            width: 100%;
+            left:0px;
+          }
+          &:hover ul{
+            transition: 1.3s;
+            max-height: 100vh;
+          }
+          &>a{
+            display: block;
+            position: relative;
+            &::after{
+              content: '';
+              background-color: #16b6dd;
+              position: absolute;
+              left: 50%;
+              bottom: -1px;
+              width: 0;
+              height: 6px;
+              transition: all 0.5s;
+            }
+          }
+          ul{
+            overflow: hidden;
+            max-height: 0px;
+            background-color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            li{
+              z-index: 998;
+              height: 70px;
+              line-height: 70px;
+              a{
+                display: block;
+                &:hover{
+                  color:#16b6dd;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ================= main ===============
+  main{
+    width: 100%;
+    background: url(../../img/main1.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 120px;
+
+    // ==== inner - top ===
+    .top{
+      margin-top: 120px;
+      letter-spacing: -1px;
+      span{
+        color:#16b6dd;
+      }
+      h1{
+        font-size:70px;
+        line-height: 44px;
+        color: rgba(255,255,255,0.7);
+        font-weight: 500;
+      }
+      h3{
+        color: #fff;
+        font-size: 30px;
+        font-weight: 300;
+      }
+      p{
+        color: #fff;
+        font-size:18px;
+        line-height: 1.5em;
+      }
+    }
+   
+    // === bottom ===
+    .bottom{
+      width: 1272px;
+      margin: 0 auto;
+      letter-spacing: -1px;
+      .main-box{
+        .thebox{
+          display: flex;
+          .swiper{
+            display: flex;
+            width: 100%;
+            height: 318px;
+            .swiper-wrapper{
+              width: 100%;
+              .swiper-slide{
+                img{
+                  width: 100%;
+                  height: 318px;
+                }
+              }
+            }
+            .swiper-button-next{
+              right:20px;
+            }
+            .swiper-button-prev{
+              left:20px;
+            }
+            .swiper-button-next,
+            .swiper-button-prev{
+              color:#222;
+            }
+          }
+          //setting
+          h3, h4{
+            font-size: 22px;
+            font-weight: 100;
+          }
+          p{
+            font-size: 16px;
+            line-height: 1.5em;
+          }
+          .longbox{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .time, .tel, .last{
+              width: 318px;
+              height: 318px;
+              padding: 20px;
+              box-sizing: border-box;
+            }
+            .tel, .last{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            // one
+            .time{
+              background-color: #fff;
+              .hour{
+                width: 100%;
+                ul{
+                  li{
+                    margin: 0 auto;
+                    padding: 8px;
+                    display: block;
+                    span{
+                      margin-left: 50px;
+                    }
+                    &:nth-child(1){
+                      width: 80%;
+                      img{
+                        margin-right: 10px;
+                      }
+                      display: flex;
+                      align-items: center;
+                      justify-content: start;
+                      font-size: 22px;
+                      text-align-last: left;
+                      border-bottom: 1px solid #222;
+                      padding-bottom: 10px;
+                    }
+                    &:nth-child(2){
+                      margin-top: 10px;
+                    }
+                    &:nth-child(3)::after{
+                      content: '야간/응급진료(전화문의)';
+                      color: #16b6dd;
+                      font-size: 14px;
+                      display: block;
+                      margin-top: 2px;
+                    }
+                    &:nth-child(4)::after{
+                      content: '예약진료(전화문의)';
+                      color: #16b6dd;
+                      font-size: 14px;
+                      display: block;
+                      margin-top: 2px;
+                    }
+                    &:last-child{
+                      width: 90%;
+                      font-size: 15px;
+                      font-weight: 700;
+                      color:#16b6dd;
+                    }
+                  }
+                }
+              }
+            }
+            // two
+            .tel{
+              background-color: #323232;
+              color:#fff;
+              h2{
+                font-size: 24px;
+              }
+              span{
+                font-size: 14px;
+                color:#16b6dd;
+              }
+            }
+            .last{
+              background-color: #BFEFFF;
+            }
+          }
+          &:last-child .last{
+            background-color: #fff;
+          }
+          .dogbox{
+            width: 100%;
+            height: 318px;
+            box-sizing: border-box;
+            padding: 10px 40px;
+            text-align: left;
+            background:url(../../img/mmain3.png) no-repeat center center;
+            color:#fff;
+            button{ 
+              all: unset;
+              cursor: pointer;
+              padding: 7px 15px;
+              border-radius: 10px;
+              border: 1px solid #fff;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ================= footer ===============
+  footer{
+    width: 100%;
+    overflow: hidden;
+    background-color: #323232;
+    margin: 0 auto;
+    .footer-box{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color:#636363;
+      border-bottom: 1px solid #636363;
+      margin-bottom: 20px;
+      .left{
+        display: flex;
+        p{
+          font-size: 15px;
+          &:nth-child(1), &:nth-child(2){
+            &::after{
+              content: '';
+              width: 1px;
+              height: 11px;
+              font-size: 0;
+              background-color: #636363;
+              margin: 0px 8px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+    .logo-img{
+      text-align: center;
+      padding-bottom: 20px;
+    }
+  }
+}
